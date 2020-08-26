@@ -437,6 +437,16 @@ public:
     virtual const char* kind() const
         { return "sc_port"; }
 
+    virtual void dump(::std::ostream& os) const
+    {
+        os << "name = " << this->name() << "\n";
+        os << "kind = " << this->kind() << "\n";
+        os << "value = " << (*this)->read() << "\n";
+    }
+    virtual void print(::std::ostream& os) const
+    {
+         os << (*this)->read();
+    }
 private:
 
     // disabled
