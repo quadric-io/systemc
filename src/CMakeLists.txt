@@ -139,6 +139,7 @@ add_library (systemc sysc/communication/sc_clock.cpp
                      sysc/tracing/sc_trace_file_base.cpp
                      sysc/tracing/sc_vcd_trace.cpp
                      sysc/tracing/sc_wif_trace.cpp
+                     sysc/tracing/sc_coverage_trace.cpp
                      sysc/utils/sc_hash.cpp
                      sysc/utils/sc_list.cpp
                      sysc/utils/sc_mempool.cpp
@@ -350,6 +351,7 @@ add_library (systemc sysc/communication/sc_clock.cpp
                      sysc/tracing/sc_tracing_ids.h
                      sysc/tracing/sc_vcd_trace.h
                      sysc/tracing/sc_wif_trace.h
+                     sysc/tracing/sc_coverage_trace.h
                      sysc/utils/sc_hash.h
                      sysc/utils/sc_list.h
                      sysc/utils/sc_machine.h

@@ -50,13 +50,15 @@ H_FILES += \
 NO_H_FILES += \
 	tracing/sc_trace_file_base.h \
 	tracing/sc_vcd_trace.h \
-	tracing/sc_wif_trace.h
+	tracing/sc_wif_trace.h \
+        tracing/sc_coverage_trace.h
 
 CXX_FILES += \
 	tracing/sc_trace.cpp \
 	tracing/sc_trace_file_base.cpp \
 	tracing/sc_vcd_trace.cpp \
-	tracing/sc_wif_trace.cpp
+	tracing/sc_wif_trace.cpp \
+	tracing/sc_coverage_trace.cpp
 
 ## Taf!
 ## :vim:ft=automake:
