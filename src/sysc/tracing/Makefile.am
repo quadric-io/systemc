@@ -43,13 +43,15 @@ H_FILES = \
 NO_H_FILES = \
 	sc_trace_file_base.h \
 	sc_vcd_trace.h \
-	sc_wif_trace.h
+	sc_wif_trace.h \
+	sc_coverage_trace.h
 
 CXX_FILES = \
 	sc_trace.cpp \
 	sc_trace_file_base.cpp \
 	sc_vcd_trace.cpp \
-	sc_wif_trace.cpp
+	sc_wif_trace.cpp \
+	sc_coverage_trace.cpp
 
 libtracing_la_SOURCES = $(H_FILES) $(NO_H_FILES) $(CXX_FILES)
 
