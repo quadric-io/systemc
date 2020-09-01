@@ -63,6 +63,9 @@ SC_DEFINE_MESSAGE( SC_ID_TRACING_VCD_REVERSED_TIME_,    714,
 /* unused IDs 715-719 */
 SC_DEFINE_MESSAGE( SC_ID_TRACING_ALREADY_INITIALIZED_,  720,
                    "sc_trace_file already initialized" )
+SC_DEFINE_MESSAGE( SC_ID_TRACING_DUPLICATE_OBJECT_,     721,
+                   "object already traced" )
+
 
 
 /*****************************************************************************

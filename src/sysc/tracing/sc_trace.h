@@ -391,6 +391,13 @@ extern void sc_close_vcd_trace_file( sc_trace_file* tf );
 extern sc_trace_file *sc_create_wif_trace_file(const char *name);
 extern void sc_close_wif_trace_file( sc_trace_file* tf );
 
+// ----------------------------------------------------------------------------
+// Create Coverage file
+extern sc_trace_file *sc_create_coverage_trace_file(const char* name);
+extern void sc_close_coverage_trace_file( sc_trace_file* tf );
+
+#define SC_COVERAGE_TRACE
+
 } // namespace sc_core
 
 #endif // SC_TRACE_H
