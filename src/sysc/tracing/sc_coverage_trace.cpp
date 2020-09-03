@@ -162,14 +162,16 @@ namespace sc_core {
         std::exit(EXIT_FAILURE);
       }
 
-      bucketPerVal |= (numBits <= LogMaxNumBuckets);
-      hasSpecialZeroBucket = SpecialZeroBucketOK && !bucketPerVal;
+      if(!std::is_same<sc_dt::sc_logic, T>::value && !std::is_same<sc_dt::sc_bit, T>::value) {
+        bucketPerVal |= (numBits <= LogMaxNumBuckets);
+        hasSpecialZeroBucket = SpecialZeroBucketOK && !bucketPerVal;
 
-      numBuckets    = bucketPerVal ? (1 << numBits) : (MaxNumBuckets + hasSpecialZeroBucket);
-      logNumBuckets = logB2(numBuckets - hasSpecialZeroBucket);
+        numBuckets    = bucketPerVal ? (1 << numBits) : (MaxNumBuckets + hasSpecialZeroBucket);
+        logNumBuckets = logB2(numBuckets - hasSpecialZeroBucket);
 
-      for(std::size_t i = 0; i < numBuckets; ++i) {
-        buckets.emplace_back();
+        for(std::size_t i = 0; i < numBuckets; ++i) {
+          buckets.emplace_back();
+        }
       }
       lastVal = curVal;
     }
