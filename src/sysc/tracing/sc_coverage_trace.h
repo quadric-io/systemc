@@ -8,7 +8,11 @@
 namespace sc_core {
   class cover_info_base {
    public:
-    cover_info_base(const std::string& name) : name(name) {}
+    cover_info_base(const std::string& name) : name(name) {
+      if(name.empty()) {
+        SC_REPORT_FATAL(SC_ID_TRACING_EMPTY_NAME_, "Attempting to cover object with no name");
+      }
+    }
     virtual std::int32_t getCoverage() const            = 0;
     virtual std::int32_t getNumBuckets() const          = 0;
     virtual std::int32_t getBucket(std::size_t i) const = 0;
