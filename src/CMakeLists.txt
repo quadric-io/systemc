@@ -71,7 +71,7 @@ endif (APPLE)
 
 add_library (systemc sysc/communication/sc_clock.cpp
                      sysc/communication/sc_event_finder.cpp
-                     sysc/communication/sc_event_queue.cpp
+                     #sysc/communication/sc_event_queue.cpp
                      sysc/communication/sc_export.cpp
                      sysc/communication/sc_interface.cpp
                      sysc/communication/sc_mutex.cpp
@@ -162,7 +162,7 @@ add_library (systemc sysc/communication/sc_clock.cpp
                      sysc/communication/sc_clock_ports.h
                      sysc/communication/sc_communication_ids.h
                      sysc/communication/sc_event_finder.h
-                     sysc/communication/sc_event_queue.h
+                     #sysc/communication/sc_event_queue.h
                      sysc/communication/sc_export.h
                      sysc/communication/sc_fifo.h
                      sysc/communication/sc_fifo_ifs.h
